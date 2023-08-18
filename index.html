@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Défi au tel</title>
+<link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="apple-touch-icon" href="logoapp.png">
+  <meta name="apple-mobile-web-app-title" content="DéfiTEL">
+  <link rel="manifest" href="/manifest.json" />
+</head>
+<body>
+<div class="container">
+  <div id="home">
+    <h1>Appelle un ami et appuie sur "GO!" quand il a décroché</h1>
+    <button class="btn" onclick="startGame()">GO!</button>
+  </div>
+  <div id="game">
+    <div class="challenge-box">
+      <h2 id=chtext>Défi à réaliser dans l'appel:</h2>
+      <p id="challenge">Défi à afficher ici</p>
+      <p id="reward">Récompense à afficher ici</p>
+    </div>
+    <button class="btn" onclick="nextChallenge('success')">Réussi</button>
+    <button class="btn" onclick="nextChallenge('skip')">Skip</button>
+    <button class="btn" onclick="endGame()">Terminé</button>
+  </div>
+  <div id="end">
+    <h2>Fin du jeu</h2>
+    <p>Score total: <span id="totalScore">0</span></p>
+    <p>Temps total en appel : <span id="totalTime">0</span> secondes</p>
+    <button class="btn" onclick="window.location.reload()">Relancer</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
